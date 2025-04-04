@@ -4,6 +4,17 @@ namespace NxPDFGenerator
 {
     public static class DependencyInjection
     {
+        public static IServiceCollection RegisterRepositories(this IServiceCollection services)
+        {
+            return services;
+        }
+
+        public static IServiceCollection RegisterServices(this IServiceCollection services)
+        {
+            services.AddScoped<IPDFGeneratorService, PDFGeneratorService>();
+            return services;
+        }
+
         public static IApplicationBuilder RegisterEndpoints(this IApplicationBuilder app)
         {
             var mapEndpointMethods = Assembly.GetExecutingAssembly().GetTypes()
