@@ -1,0 +1,6 @@
+@NxPDFGenerator_HostAddress = http://localhost:5261
+
+GET {{NxPDFGenerator_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
