@@ -11,7 +11,6 @@ namespace NxPDFGenerator
 
         public static IServiceCollection RegisterServices(this IServiceCollection services)
         {
-            services.AddScoped<IPDFGeneratorService, PDFGeneratorService>();
             return services;
         }
 
